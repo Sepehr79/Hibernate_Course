@@ -6,7 +6,6 @@ import javax.persistence.*;
 @Table(name = "Emp")
 public class Employee {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
     private int id;
 
@@ -23,6 +22,13 @@ public class Employee {
     }
 
     public Employee(String name, String lastName, String companyName) {
+        this.name = name;
+        this.lastName = lastName;
+        this.companyName = companyName;
+    }
+
+    public Employee( String name, String lastName, String companyName, int id) {
+        this.id = id;
         this.name = name;
         this.lastName = lastName;
         this.companyName = companyName;
@@ -58,5 +64,15 @@ public class Employee {
 
     public void setCompanyName(String companyName) {
         this.companyName = companyName;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", companyName='" + companyName + '\'' +
+                '}';
     }
 }

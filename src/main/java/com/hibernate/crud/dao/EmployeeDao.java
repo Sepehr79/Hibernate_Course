@@ -43,30 +43,48 @@ public class EmployeeDao implements DAO<Employee> {
     public Employee readUniqueById(int id) {
         Session session = Factory.getSessionFactory().openSession();
 
-        return (Employee) session.createQuery("from Employee where id = :id").
-                setParameter("id", id).
-                uniqueResult();
+        Employee employee = null;
+        try {
+            session.beginTransaction();
 
+            employee = session.get(Employee.class, id);
+
+            session.getTransaction().commit();
+        }catch (Exception exception){
+            session.getTransaction().rollback();
+        }finally {
+            session.close();
+        }
+        return employee;
     }
 
     @Override
     public void updateByQuery(String query) {
-
+        executeQuery(query);
     }
 
     @Override
-    public void updateBySampleObject(Employee object) {
+    public void deleteById(int id) {
+        Session session = Factory.getSessionFactory().openSession();
 
-    }
+        try {
+            session.beginTransaction();
 
-    @Override
-    public void deleteBySampleObject(Employee object) {
+            Employee employee = session.get(Employee.class, id);
 
+            session.delete(employee);
+
+            session.getTransaction().commit();
+        }catch (Exception exception){
+            session.getTransaction().rollback();
+        }finally {
+            session.close();
+        }
     }
 
     @Override
     public void deleteByQuery(String query) {
-
+        executeQuery(query);
     }
 
     @Override
@@ -77,6 +95,22 @@ public class EmployeeDao implements DAO<Employee> {
             session.beginTransaction();
 
             session.createQuery("delete from Employee").executeUpdate();
+
+            session.getTransaction().commit();
+        }catch (Exception exception){
+            session.getTransaction().rollback();
+        }finally {
+            session.close();
+        }
+    }
+
+    private void executeQuery(String query){
+        Session session = Factory.getSessionFactory().openSession();
+
+        try {
+            session.beginTransaction();
+
+            session.createQuery(query).executeUpdate();
 
             session.getTransaction().commit();
         }catch (Exception exception){

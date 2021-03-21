@@ -16,9 +16,7 @@ public interface DAO<DT> {
 
     public void updateByQuery(String query);
 
-    public void updateBySampleObject(DT object);
-
-    public void deleteBySampleObject(DT object);
+    public void deleteById(int id);
 
     public void deleteByQuery(String query);
 
