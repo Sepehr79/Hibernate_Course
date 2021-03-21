@@ -60,6 +60,19 @@ public class TestEmployeeDao {
     }
 
     @Test
+    public void testUpdateById(){
+        Employee employee = new Employee("ahmad", "ahmadi", "ahmadian");
+
+        employeeDao.updateById(employee, 1);
+
+        Employee editedEmployee = employeeDao.readUniqueById(1);
+
+        Assert.assertEquals(editedEmployee.getName(), "ahmad");
+
+        Assert.assertEquals(editedEmployee.getLastName(), "ahmadi");
+    }
+
+    @Test
     public void testDeleteById(){
         employeeDao.deleteById(1);
 

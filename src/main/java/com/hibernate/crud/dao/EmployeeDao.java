@@ -64,6 +64,27 @@ public class EmployeeDao implements DAO<Employee> {
     }
 
     @Override
+    public void updateById(Employee newObject, int id) {
+        Session session = Factory.getSessionFactory().openSession();
+
+        try {
+            session.beginTransaction();
+
+            Employee employee = session.get(Employee.class, id);
+
+            employee.setName(newObject.getName());
+            employee.setLastName(newObject.getLastName());
+            employee.setCompanyName(newObject.getCompanyName());
+
+            session.getTransaction().commit();
+        }catch (Exception exception){
+            session.getTransaction().rollback();
+        }finally {
+            session.close();
+        }
+    }
+
+    @Override
     public void deleteById(int id) {
         Session session = Factory.getSessionFactory().openSession();
 

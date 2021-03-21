@@ -11,7 +11,7 @@ public class Factory {
     }
 
     public static SessionFactory getSessionFactory(){
-        return new Configuration().configure("hibernate.cfg.xml").
+        return new Configuration().configure("config/hibernate.cfg.xml").
                 addAnnotatedClass(Employee.class).buildSessionFactory();
     }
 }
