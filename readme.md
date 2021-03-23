@@ -3,3 +3,5 @@ In this repository i try to learn hibernate
 
 ### Topics
 * Simple crud
+* Advance mapping
+    * @OneToOne
