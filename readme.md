@@ -1,3 +1,5 @@
+![hibernate logo](pictures/Hibernate_logo_a.png)
+
 ## Hibernate course
 In this repository i try to learn hibernate
 
