@@ -1,3 +1,4 @@
 .idea
 Hibernate_Course.iml
 target
+/bin/
