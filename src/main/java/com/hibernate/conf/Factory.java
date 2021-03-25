@@ -1,5 +1,7 @@
 package com.hibernate.conf;
 
+import com.hibernate.advancemapping.onetomany.Course;
+import com.hibernate.advancemapping.onetomany.Student;
 import com.hibernate.advancemapping.onetoone.Instructor;
 import com.hibernate.advancemapping.onetoone.InstructorDetail;
 import com.hibernate.beans.Employee;
@@ -17,6 +19,8 @@ public class Factory {
                 addAnnotatedClass(Employee.class).
                 addAnnotatedClass(Instructor.class).
                 addAnnotatedClass(InstructorDetail.class).
+                addAnnotatedClass(Student.class).
+                addAnnotatedClass(Course.class).
                 buildSessionFactory();
     }
 }
