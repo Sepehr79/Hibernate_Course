@@ -7,3 +7,6 @@ In this repository i try to learn hibernate
 * Simple crud
 * Advance mapping
     * @OneToOne
+    * @OneToMany
+    * @ManyToOne
+  
