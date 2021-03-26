@@ -9,4 +9,7 @@ In this repository i try to learn hibernate
     * @OneToOne
     * @OneToMany
     * @ManyToOne
+* FetchType  
+  * Lazy
+  * Eager
   

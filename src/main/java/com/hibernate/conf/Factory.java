@@ -5,6 +5,9 @@ import com.hibernate.advancemapping.onetomany.Student;
 import com.hibernate.advancemapping.onetoone.Instructor;
 import com.hibernate.advancemapping.onetoone.InstructorDetail;
 import com.hibernate.beans.Employee;
+import com.hibernate.fetch.Store;
+import com.hibernate.fetch.eager.Product;
+import com.hibernate.fetch.lazy.Customer;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
@@ -21,6 +24,9 @@ public class Factory {
                 addAnnotatedClass(InstructorDetail.class).
                 addAnnotatedClass(Student.class).
                 addAnnotatedClass(Course.class).
+                addAnnotatedClass(Store.class).
+                addAnnotatedClass(Product.class).
+                addAnnotatedClass(Customer.class).
                 buildSessionFactory();
     }
 }
