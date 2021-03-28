@@ -1,5 +1,7 @@
 package com.hibernate.advancemapping.onetomany;
 
+import com.hibernate.advancemapping.manytoone.Course;
+
 import javax.persistence.*;
 import java.util.LinkedList;
 import java.util.List;

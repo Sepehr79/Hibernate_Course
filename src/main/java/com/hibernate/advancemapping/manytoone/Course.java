@@ -1,4 +1,6 @@
-package com.hibernate.advancemapping.onetomany;
+package com.hibernate.advancemapping.manytoone;
+
+import com.hibernate.advancemapping.onetomany.Student;
 
 import javax.persistence.*;
 

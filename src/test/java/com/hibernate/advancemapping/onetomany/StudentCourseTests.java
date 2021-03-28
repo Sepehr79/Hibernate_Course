@@ -1,5 +1,6 @@
 package com.hibernate.advancemapping.onetomany;
 
+import com.hibernate.advancemapping.manytoone.Course;
 import com.hibernate.conf.Factory;
 import org.hibernate.Session;
 import org.junit.Assert;
