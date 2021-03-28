@@ -38,8 +38,8 @@ public class UniDirectionalTests {
             Project project = new Project(1, "Android project");
 
             Dependency dependency1 = new Dependency("sqlite driver");
-            Dependency dependency2 = new Dependency("sqlite driver");
-            Dependency dependency3 = new Dependency("sqlite driver");
+            Dependency dependency2 = new Dependency("junit");
+            Dependency dependency3 = new Dependency("hibernate");
 
             project.addDependency(dependency1);
             project.addDependency(dependency2);
