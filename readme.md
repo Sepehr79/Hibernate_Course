@@ -1,7 +1,7 @@
 ![hibernate logo](pictures/Hibernate_logo_a.png)
 
 ## Hibernate course
-In this repository i try to learn hibernate
+In this repository I try to learn hibernate
 
 ### Topics
 * Simple crud
@@ -13,4 +13,6 @@ In this repository i try to learn hibernate
 * FetchType  
   * Lazy
   * Eager
+
+And more...  
   
