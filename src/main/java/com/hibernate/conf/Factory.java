@@ -1,5 +1,7 @@
 package com.hibernate.conf;
 
+import com.hibernate.advancemapping.manytomany.Person;
+import com.hibernate.advancemapping.manytomany.Work;
 import com.hibernate.advancemapping.manytoone.Course;
 import com.hibernate.advancemapping.onetomany.Dependency;
 import com.hibernate.advancemapping.onetomany.Project;
@@ -31,6 +33,8 @@ public class Factory {
                 addAnnotatedClass(Customer.class).
                 addAnnotatedClass(Project.class).
                 addAnnotatedClass(Dependency.class).
+                addAnnotatedClass(Person.class).
+                addAnnotatedClass(Work.class).
                 buildSessionFactory();
     }
 }
