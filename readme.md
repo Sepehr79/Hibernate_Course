@@ -10,7 +10,8 @@ In this repository I try to learn hibernate
     * @OneToMany
     * @ManyToOne
     * @ManyToMany
-* FetchType  
+* Cascade types  
+* Fetch type  
   * Lazy
   * Eager
 
